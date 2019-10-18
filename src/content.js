@@ -81,7 +81,7 @@ export const projects = [
         year: 2019,
         description: "Led development of over 25+ large and small projects in PHP/webdev, such as releasing a new web platform, developing administration systems and interfaces, and maintaining financial systems.",
         techniques: ['Wordpress', 'Wordpress plugins', 'PHP', 'Bootstrap'],
-        tags: ['experience']
+        tags: ['experience', 'highlight']
     },
     // {
     //     name: '',
