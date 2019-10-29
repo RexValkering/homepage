@@ -11,8 +11,12 @@
           <p><i>myfullname at gmail dot com</i></p>
           <p><a href="https://www.linkedin.com/in/rex-valkering/">LinkedIn</a></p>
         </div>
-        <div class="col col-md-9">
-          <portfolio class="pl-md-5"></portfolio>
+        <div class="col col-md-9 pl-md-5">
+          <navigation></navigation>
+          <hr>
+          <transition name="slide" mode="out-in">
+            <router-view :key="$route.fullPath"></router-view>
+          </transition>
         </div>
       </div>
     </div>
@@ -21,11 +25,13 @@
 
 <script>
 import Portfolio from './components/Portfolio';
+import Navigation from './components/Navigation';
 
 export default {
   name: 'App',
   components: {
-    portfolio: Portfolio
+    portfolio: Portfolio,
+    navigation: Navigation
   }
 }
 </script>
@@ -33,5 +39,35 @@ export default {
 <style>
 a {
   color: #246b81;
+}
+
+.slide-enter-active {
+    animation: slide-in 200ms ease-out forwards;
+}
+
+.slide-leave-active {
+    animation: slide-out 200ms ease-out forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-30);
+        opacity: 0;
+    }
 }
 </style>
