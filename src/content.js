@@ -82,5 +82,17 @@ export const projects = [
     description: "Led development of over 25+ large and small projects in PHP/webdev, such as releasing a new web platform, developing administration systems and interfaces, and maintaining financial systems.",
     techniques: ['Wordpress', 'Wordpress plugins', 'PHP', 'Bootstrap'],
     tags: ['highlight']
+  },
+  {
+    name: "Change My Vue",
+    type: "project",
+    year: 2020,
+    description: "In March of 2020 I held a workshop on possible XSS-vulnerabilities in Vue.js. The workshop contains an educational website and three exercises of varying difficulty.",
+    techniques: ['Vue.js', 'XSS', 'Python', 'Selenium'],
+    links: [{
+      url: 'https://github.com/RexValkering/insecure-vue-apps',
+      text: 'Link to GitHub'
+    }],
+    tags: ['voluntary', 'open-source', 'highlight']
   }
 ];
